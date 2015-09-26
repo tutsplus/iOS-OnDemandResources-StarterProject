@@ -10,36 +10,57 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
-    var detailItem: AnyObject? {
-        didSet {
-            // Update the view.
-            self.configureView()
-        }
-    }
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
-    }
-
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
+    
+    var tagToLoad: String!
+    var request: NSBundleResourceRequest!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        request = NSBundleResourceRequest(tags: [tagToLoad])
+        request.beginAccessingResourcesWithCompletionHandler { (error: NSError?) -> Void in
+            //  Called on background thread
+            if error == nil {
+                NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                    self.displayImages()
+                })
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func displayImages() {
+        if colorTags.contains(tagToLoad) {
+            image1.image = UIImage(named: tagToLoad + " Circle")
+            image2.image = UIImage(named: tagToLoad + " Square")
+            image3.image = UIImage(named: tagToLoad + " Star")
+            image4.image = UIImage(named: tagToLoad + " Hexagon")
+        } else if shapeTags.contains(tagToLoad) {
+            image1.image = UIImage(named: "Red " + tagToLoad)
+            image2.image = UIImage(named: "Blue " + tagToLoad)
+            image3.image = UIImage(named: "Green " + tagToLoad)
+        }
+    }
+    
+    /*
+    // MARK: - Navigation
 
-
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    
 }
-

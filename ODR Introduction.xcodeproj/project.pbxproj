@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		606D6CA51BB678810022B670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606D6CA41BB678810022B670 /* AppDelegate.swift */; };
-		606D6CA71BB678810022B670 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606D6CA61BB678810022B670 /* MasterViewController.swift */; };
-		606D6CA91BB678810022B670 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606D6CA81BB678810022B670 /* DetailViewController.swift */; };
 		606D6CAC1BB678810022B670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606D6CAA1BB678810022B670 /* Main.storyboard */; };
 		606D6CAE1BB678810022B670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 606D6CAD1BB678810022B670 /* Assets.xcassets */; };
 		606D6CB11BB678810022B670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606D6CAF1BB678810022B670 /* LaunchScreen.storyboard */; };
+		606D6CBD1BB67E950022B670 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606D6CBC1BB67E950022B670 /* ColorTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		606D6CBF1BB67EA50022B670 /* ShapeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606D6CBE1BB67EA50022B670 /* ShapeTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		606D6CC11BB67EB70022B670 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606D6CC01BB67EB70022B670 /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		606D6CA11BB678810022B670 /* ODR Introduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ODR Introduction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		606D6CA41BB678810022B670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		606D6CA61BB678810022B670 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		606D6CA81BB678810022B670 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		606D6CAB1BB678810022B670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		606D6CAD1BB678810022B670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		606D6CB01BB678810022B670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		606D6CB21BB678810022B670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606D6CBC1BB67E950022B670 /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
+		606D6CBE1BB67EA50022B670 /* ShapeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeTableViewController.swift; sourceTree = "<group>"; };
+		606D6CC01BB67EB70022B670 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				606D6CA41BB678810022B670 /* AppDelegate.swift */,
-				606D6CA61BB678810022B670 /* MasterViewController.swift */,
-				606D6CA81BB678810022B670 /* DetailViewController.swift */,
+				606D6CBC1BB67E950022B670 /* ColorTableViewController.swift */,
+				606D6CBE1BB67EA50022B670 /* ShapeTableViewController.swift */,
+				606D6CC01BB67EB70022B670 /* DetailViewController.swift */,
 				606D6CAA1BB678810022B670 /* Main.storyboard */,
 				606D6CAD1BB678810022B670 /* Assets.xcassets */,
 				606D6CAF1BB678810022B670 /* LaunchScreen.storyboard */,
@@ -93,6 +96,15 @@
 		606D6C991BB678810022B670 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					Blue,
+					Circle,
+					Green,
+					Hexagon,
+					Red,
+					Square,
+					Star,
+				);
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = tutsplus;
 				TargetAttributes = {
@@ -137,9 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				606D6CA91BB678810022B670 /* DetailViewController.swift in Sources */,
-				606D6CA71BB678810022B670 /* MasterViewController.swift in Sources */,
 				606D6CA51BB678810022B670 /* AppDelegate.swift in Sources */,
+				606D6CBD1BB67E950022B670 /* ColorTableViewController.swift in Sources */,
+				606D6CBF1BB67EA50022B670 /* ShapeTableViewController.swift in Sources */,
+				606D6CC11BB67EB70022B670 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +263,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ODR Introduction/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tutsplus.ODR-Introduction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -261,10 +278,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ODR Introduction/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tutsplus.ODR-Introduction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
